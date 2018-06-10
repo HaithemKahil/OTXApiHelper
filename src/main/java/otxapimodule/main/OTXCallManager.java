@@ -35,8 +35,8 @@ public class OTXCallManager {
         otxConnection.createPulse(pulse);
     }
 
-    public ArrayList<Indicator> listPulseIndicators(String pulseId) throws MalformedURLException, URISyntaxException {
-        return (ArrayList<Indicator>) otxConnection.getAllIndicatorsForPulse(pulseId);
+    public List<Indicator> listPulseIndicators(String pulseId) throws MalformedURLException, URISyntaxException {
+        return otxConnection.getAllIndicatorsForPulse(pulseId);
     }
 
     public static Pulse getPulse(String pulseName, String pulseDescription, List<Indicator> indicators, List<String> tags, List<String> refrences, String tlp, boolean isPublic) {

@@ -1,18 +1,22 @@
 package otxapimodule.main;
 
 import com.alienvault.otx.model.indicator.IndicatorType;
+import com.alienvault.otx.model.pulse.Pulse;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
 import org.springframework.context.ConfigurableApplicationContext;
 import sun.applet.Main;
 
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
+import java.util.List;
 
 @SpringBootApplication
 public class MainApplication extends Application {
@@ -28,7 +32,7 @@ public class MainApplication extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("fxmlfiles/CreateIndicatorScreen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("fxmlfiles/ListPulsesScreen.fxml"));
         primaryStage.setTitle("OTX Api Helper");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
