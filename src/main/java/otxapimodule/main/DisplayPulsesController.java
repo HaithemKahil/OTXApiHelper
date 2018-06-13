@@ -89,4 +89,5 @@ public class DisplayPulsesController implements Initializable {
         tlpColumn.setCellValueFactory(new PropertyValueFactory<>("tlp"));
         pulsesTableView.setItems(listedPulses);
     }
+
 }
